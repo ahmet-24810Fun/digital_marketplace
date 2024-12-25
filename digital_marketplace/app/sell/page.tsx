@@ -4,6 +4,9 @@ import { Label } from "@/components/ui/label";
 import { SelectCategory } from "../components/SelectCategory";
 import { Textarea } from "@/components/ui/textarea";
 import { TipTapEditor } from "../components/Editor";
+import { UploadDropzone } from "../lib/uploadthing";
+
+
 
 export default function SellRoute() {
   return (
@@ -34,6 +37,10 @@ export default function SellRoute() {
                    <div className="flex flex-col gap-y-2">
                         <Label> Description</Label>
                         <TipTapEditor/>    
+                   </div>
+                   <div className="flex flex-col gap-y-2">
+                         <Label>Product Images</Label>
+                         <UploadDropzone endpoint="imageUploader" />
                    </div>
                  </CardContent>
               </form>
