@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { SelectCategory } from "../components/SelectCategory";
@@ -42,7 +42,14 @@ export default function SellRoute() {
                          <Label>Product Images</Label>
                          <UploadDropzone endpoint="imageUploader" />
                    </div>
+                   <div className="flex flex-col gap-y-2">
+                         <Label>Product File</Label>
+                         <UploadDropzone endpoint="productFileUpload" />
+                   </div>
                  </CardContent>
+                 <CardFooter className="mt-5">
+                         <button className="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+                 </CardFooter>
               </form>
           </Card>
       </section>                    
